@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE52DC561F6C6E26000E34E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52DC551F6C6E26000E34E6 /* AppDelegate.swift */; };
+		FE52DC581F6C6E26000E34E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52DC571F6C6E26000E34E6 /* ViewController.swift */; };
+		FE52DC5B1F6C6E26000E34E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE52DC591F6C6E26000E34E6 /* Main.storyboard */; };
+		FE52DC5E1F6C6E27000E34E6 /* SoccerTracking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE52DC5C1F6C6E27000E34E6 /* SoccerTracking.xcdatamodeld */; };
+		FE52DC601F6C6E27000E34E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE52DC5F1F6C6E27000E34E6 /* Assets.xcassets */; };
+		FE52DC631F6C6E27000E34E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE52DC611F6C6E27000E34E6 /* LaunchScreen.storyboard */; };
+		FE52DC7C1F6C6E5C000E34E6 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE52DC761F6C6E4A000E34E6 /* GPUImage.framework */; };
+		FE52DC7E1F6C6E6D000E34E6 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE52DC761F6C6E4A000E34E6 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE52DC711F6C6E4A000E34E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE52DC6A1F6C6E49000E34E6 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC6E7CAB1C39A9D8006DF678;
+			remoteInfo = GPUImage_macOS;
+		};
+		FE52DC731F6C6E4A000E34E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE52DC6A1F6C6E49000E34E6 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC6E7CB51C39A9D8006DF678;
+			remoteInfo = GPUImageTests_macOS;
+		};
+		FE52DC751F6C6E4A000E34E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE52DC6A1F6C6E49000E34E6 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC9E34E91E524A2200B8604F;
+			remoteInfo = GPUImage_iOS;
+		};
+		FE52DC771F6C6E4A000E34E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE52DC6A1F6C6E49000E34E6 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC9E34F11E524A2200B8604F;
+			remoteInfo = GPUImageTests_iOS;
+		};
+		FE52DC791F6C6E56000E34E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE52DC6A1F6C6E49000E34E6 /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BC9E34E81E524A2200B8604F;
+			remoteInfo = GPUImage_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE52DC7D1F6C6E61000E34E6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FE52DC7E1F6C6E6D000E34E6 /* GPUImage.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FE52DC521F6C6E26000E34E6 /* SoccerTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE52DC551F6C6E26000E34E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE52DC571F6C6E26000E34E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE52DC5A1F6C6E26000E34E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE52DC5D1F6C6E27000E34E6 /* SoccerTracking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoccerTracking.xcdatamodel; sourceTree = "<group>"; };
+		FE52DC5F1F6C6E27000E34E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE52DC621F6C6E27000E34E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE52DC641F6C6E27000E34E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE52DC6A1F6C6E49000E34E6 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE52DC4F1F6C6E26000E34E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE52DC7C1F6C6E5C000E34E6 /* GPUImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE52DC491F6C6E26000E34E6 = {
+			isa = PBXGroup;
+			children = (
+				FE52DC541F6C6E26000E34E6 /* SoccerTracking */,
+				FE52DC531F6C6E26000E34E6 /* Products */,
+				FE52DC6A1F6C6E49000E34E6 /* GPUImage.xcodeproj */,
+				FE52DC7B1F6C6E5C000E34E6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FE52DC531F6C6E26000E34E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE52DC521F6C6E26000E34E6 /* SoccerTracking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE52DC541F6C6E26000E34E6 /* SoccerTracking */ = {
+			isa = PBXGroup;
+			children = (
+				FE52DC551F6C6E26000E34E6 /* AppDelegate.swift */,
+				FE52DC571F6C6E26000E34E6 /* ViewController.swift */,
+				FE52DC591F6C6E26000E34E6 /* Main.storyboard */,
+				FE52DC5F1F6C6E27000E34E6 /* Assets.xcassets */,
+				FE52DC611F6C6E27000E34E6 /* LaunchScreen.storyboard */,
+				FE52DC641F6C6E27000E34E6 /* Info.plist */,
+				FE52DC5C1F6C6E27000E34E6 /* SoccerTracking.xcdatamodeld */,
+			);
+			path = SoccerTracking;
+			sourceTree = "<group>";
+		};
+		FE52DC6B1F6C6E49000E34E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE52DC721F6C6E4A000E34E6 /* GPUImage.framework */,
+				FE52DC741F6C6E4A000E34E6 /* GPUImageTests_macOS.xctest */,
+				FE52DC761F6C6E4A000E34E6 /* GPUImage.framework */,
+				FE52DC781F6C6E4A000E34E6 /* GPUImageTests_iOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE52DC7B1F6C6E5C000E34E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE52DC511F6C6E26000E34E6 /* SoccerTracking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE52DC671F6C6E27000E34E6 /* Build configuration list for PBXNativeTarget "SoccerTracking" */;
+			buildPhases = (
+				FE52DC4E1F6C6E26000E34E6 /* Sources */,
+				FE52DC4F1F6C6E26000E34E6 /* Frameworks */,
+				FE52DC501F6C6E26000E34E6 /* Resources */,
+				FE52DC7D1F6C6E61000E34E6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE52DC7A1F6C6E56000E34E6 /* PBXTargetDependency */,
+			);
+			name = SoccerTracking;
+			productName = SoccerTracking;
+			productReference = FE52DC521F6C6E26000E34E6 /* SoccerTracking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE52DC4A1F6C6E26000E34E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Gustavo De Mello Crivelli";
+				TargetAttributes = {
+					FE52DC511F6C6E26000E34E6 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FE52DC4D1F6C6E26000E34E6 /* Build configuration list for PBXProject "SoccerTracking" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE52DC491F6C6E26000E34E6;
+			productRefGroup = FE52DC531F6C6E26000E34E6 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FE52DC6B1F6C6E49000E34E6 /* Products */;
+					ProjectRef = FE52DC6A1F6C6E49000E34E6 /* GPUImage.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				FE52DC511F6C6E26000E34E6 /* SoccerTracking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FE52DC721F6C6E4A000E34E6 /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = FE52DC711F6C6E4A000E34E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE52DC741F6C6E4A000E34E6 /* GPUImageTests_macOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests_macOS.xctest;
+			remoteRef = FE52DC731F6C6E4A000E34E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE52DC761F6C6E4A000E34E6 /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = FE52DC751F6C6E4A000E34E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE52DC781F6C6E4A000E34E6 /* GPUImageTests_iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests_iOS.xctest;
+			remoteRef = FE52DC771F6C6E4A000E34E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE52DC501F6C6E26000E34E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE52DC631F6C6E27000E34E6 /* LaunchScreen.storyboard in Resources */,
+				FE52DC601F6C6E27000E34E6 /* Assets.xcassets in Resources */,
+				FE52DC5B1F6C6E26000E34E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE52DC4E1F6C6E26000E34E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE52DC581F6C6E26000E34E6 /* ViewController.swift in Sources */,
+				FE52DC561F6C6E26000E34E6 /* AppDelegate.swift in Sources */,
+				FE52DC5E1F6C6E27000E34E6 /* SoccerTracking.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE52DC7A1F6C6E56000E34E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage_iOS;
+			targetProxy = FE52DC791F6C6E56000E34E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE52DC591F6C6E26000E34E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE52DC5A1F6C6E26000E34E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE52DC611F6C6E27000E34E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE52DC621F6C6E27000E34E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE52DC651F6C6E27000E34E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE52DC661F6C6E27000E34E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE52DC681F6C6E27000E34E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UMGS9WR96D;
+				INFOPLIST_FILE = SoccerTracking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.SoccerTracking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE52DC691F6C6E27000E34E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UMGS9WR96D;
+				INFOPLIST_FILE = SoccerTracking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.SoccerTracking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE52DC4D1F6C6E26000E34E6 /* Build configuration list for PBXProject "SoccerTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE52DC651F6C6E27000E34E6 /* Debug */,
+				FE52DC661F6C6E27000E34E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE52DC671F6C6E27000E34E6 /* Build configuration list for PBXNativeTarget "SoccerTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE52DC681F6C6E27000E34E6 /* Debug */,
+				FE52DC691F6C6E27000E34E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FE52DC5C1F6C6E27000E34E6 /* SoccerTracking.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FE52DC5D1F6C6E27000E34E6 /* SoccerTracking.xcdatamodel */,
+			);
+			currentVersion = FE52DC5D1F6C6E27000E34E6 /* SoccerTracking.xcdatamodel */;
+			path = SoccerTracking.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FE52DC4A1F6C6E26000E34E6 /* Project object */;
+}
