@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     var count = 0
     
-    @IBOutlet private weak var cameraView: UIView?
+    @IBOutlet private weak var cameraView: RenderView?
     @IBOutlet private weak var highlightView: UIView? {
         didSet {
             self.highlightView?.layer.borderColor = UIColor.red.cgColor
@@ -43,18 +43,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        do {
-        //            let camera = try Camera(sessionPreset: AVCaptureSession.Preset.hd1280x720.rawValue)
-        //            let filter = SketchFilter()
-        //
-        //            camera.addTarget(filter)
-        //            filter.addTarget(cameraView!)
-        //
-        //            camera.startCapture()
-        //        }
-        //        catch {
-        //            fatalError("Could not initialize rendering pipeline: \(error)")
-        //        }
+                do {
+                    let camera = try Camera(sessionPreset: AVCaptureSession.Preset.hd1280x720.rawValue)
+                    let filter = SketchFilter()
+        
+                    camera.addTarget(filter)
+                    filter.addTarget(cameraView!)
+        
+                    camera.startCapture()
+                }
+                catch {
+                    fatalError("Could not initialize rendering pipeline: \(error)")
+                }
         
         
 //        // make the camera appear on the screen
