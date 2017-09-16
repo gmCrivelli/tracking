@@ -221,7 +221,7 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         //validation of data
         let dist:Double = (Double(distanceBetweenMarkersInMeters) * Double(percentageRan))
-        if(true) {
+        if(runningData.count < 5 || abs((runningData.last?.0)! - dist) < 0.6) {
             runningData.append((dist, timeInterval))
         }
         
@@ -232,6 +232,14 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         
         
+    }
+    
+    func standardDeviation(_ arr: [Double]) -> Double
+    {
+        let length = Double(arr.count)
+        let avg = arr.reduce(0, {$0 + $1}) / length
+        let sumOfSquaredAvgDiff = arr.map { pow($0 - avg, 2.0)}.reduce(0, {$0 + $1})
+        return sqrt(sumOfSquaredAvgDiff / length)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
