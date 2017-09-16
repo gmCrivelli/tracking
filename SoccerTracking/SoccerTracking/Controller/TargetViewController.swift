@@ -145,8 +145,8 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         print(finishPosition)
         print(initPosition)
         
-        readyButton.removeFromSuperview()
-        
+        readyButton.layer.opacity = 0
+
     }
     
     @objc func drag(_ recognizer:UIPanGestureRecognizer) {
