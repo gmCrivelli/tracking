@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BB9FC501F6C84480022C2BF /* TargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9FC4F1F6C84480022C2BF /* TargetViewController.swift */; };
+		8BB9FC541F6C8C0D0022C2BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB9FC531F6C8C0D0022C2BF /* Images.xcassets */; };
 		FE52DC561F6C6E26000E34E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52DC551F6C6E26000E34E6 /* AppDelegate.swift */; };
 		FE52DC581F6C6E26000E34E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52DC571F6C6E26000E34E6 /* ViewController.swift */; };
 		FE52DC5B1F6C6E26000E34E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE52DC591F6C6E26000E34E6 /* Main.storyboard */; };
 		FE52DC5E1F6C6E27000E34E6 /* SoccerTracking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE52DC5C1F6C6E27000E34E6 /* SoccerTracking.xcdatamodeld */; };
-		FE52DC601F6C6E27000E34E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE52DC5F1F6C6E27000E34E6 /* Assets.xcassets */; };
 		FE52DC631F6C6E27000E34E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE52DC611F6C6E27000E34E6 /* LaunchScreen.storyboard */; };
 		FE52DC7C1F6C6E5C000E34E6 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE52DC761F6C6E4A000E34E6 /* GPUImage.framework */; };
 		FE52DC7E1F6C6E6D000E34E6 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE52DC761F6C6E4A000E34E6 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -69,12 +70,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8BB9FC4F1F6C84480022C2BF /* TargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetViewController.swift; sourceTree = "<group>"; };
+		8BB9FC531F6C8C0D0022C2BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE52DC521F6C6E26000E34E6 /* SoccerTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE52DC551F6C6E26000E34E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE52DC571F6C6E26000E34E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE52DC5A1F6C6E26000E34E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE52DC5D1F6C6E27000E34E6 /* SoccerTracking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoccerTracking.xcdatamodel; sourceTree = "<group>"; };
-		FE52DC5F1F6C6E27000E34E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE52DC621F6C6E27000E34E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE52DC641F6C6E27000E34E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE52DC6A1F6C6E49000E34E6 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
@@ -92,9 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BB9FC4E1F6C841D0022C2BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BB9FC4F1F6C84480022C2BF /* TargetViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		FE52DC491F6C6E26000E34E6 = {
 			isa = PBXGroup;
 			children = (
+				8BB9FC531F6C8C0D0022C2BF /* Images.xcassets */,
 				FE52DC541F6C6E26000E34E6 /* SoccerTracking */,
 				FE52DC531F6C6E26000E34E6 /* Products */,
 				FE52DC6A1F6C6E49000E34E6 /* GPUImage.xcodeproj */,
@@ -113,10 +124,10 @@
 		FE52DC541F6C6E26000E34E6 /* SoccerTracking */ = {
 			isa = PBXGroup;
 			children = (
+				8BB9FC4E1F6C841D0022C2BF /* Controller */,
 				FE52DC551F6C6E26000E34E6 /* AppDelegate.swift */,
 				FE52DC571F6C6E26000E34E6 /* ViewController.swift */,
 				FE52DC591F6C6E26000E34E6 /* Main.storyboard */,
-				FE52DC5F1F6C6E27000E34E6 /* Assets.xcassets */,
 				FE52DC611F6C6E27000E34E6 /* LaunchScreen.storyboard */,
 				FE52DC641F6C6E27000E34E6 /* Info.plist */,
 				FE52DC5C1F6C6E27000E34E6 /* SoccerTracking.xcdatamodeld */,
@@ -240,8 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB9FC541F6C8C0D0022C2BF /* Images.xcassets in Resources */,
 				FE52DC631F6C6E27000E34E6 /* LaunchScreen.storyboard in Resources */,
-				FE52DC601F6C6E27000E34E6 /* Assets.xcassets in Resources */,
 				FE52DC5B1F6C6E26000E34E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +267,7 @@
 				FE52DC581F6C6E26000E34E6 /* ViewController.swift in Sources */,
 				FE52DC561F6C6E26000E34E6 /* AppDelegate.swift in Sources */,
 				FE52DC5E1F6C6E27000E34E6 /* SoccerTracking.xcdatamodeld in Sources */,
+				8BB9FC501F6C84480022C2BF /* TargetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UMGS9WR96D;
+				DEVELOPMENT_TEAM = HP9K94NDXN;
 				INFOPLIST_FILE = SoccerTracking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.SoccerTracking;
@@ -416,7 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UMGS9WR96D;
+				DEVELOPMENT_TEAM = HP9K94NDXN;
 				INFOPLIST_FILE = SoccerTracking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.eldorado.bepid.SoccerTracking;

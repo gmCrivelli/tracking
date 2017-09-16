@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CIY-Er-zVk">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,15 +14,8 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SoccerTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="RenderView" customModule="GPUImage">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oE4-e6-qYo" userLabel="Highlight View">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -32,7 +25,6 @@
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="8bC-Xf-vdC" id="h6M-jZ-aMx"/>
-                        <outlet property="highlightView" destination="oE4-e6-qYo" id="HKK-ZI-iUA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -43,5 +35,86 @@
                 </tapGestureRecognizer>
             </objects>
         </scene>
+        <!--Target View Controller-->
+        <scene sceneID="T6g-3Q-YK4">
+            <objects>
+                <viewController id="CIY-Er-zVk" customClass="TargetViewController" customModule="SoccerTracking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6OC-xT-CiT">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-2b-sYD" userLabel="cameraView">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="87h-q4-rVG" appends="YES" id="oMS-JE-wus"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fib-0g-OhI" userLabel="highlightView">
+                                <rect key="frame" x="213" y="123" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7u-jS-ZRE">
+                                <rect key="frame" x="310.5" y="172.5" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pronto">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="readyButtonClicked:" destination="CIY-Er-zVk" eventType="touchUpInside" id="liY-zp-lDP"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="target" translatesAutoresizingMaskIntoConstraints="NO" id="N4c-kN-pg7" userLabel="init">
+                                <rect key="frame" x="156.5" y="167.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="6CG-5t-5rH"/>
+                                    <constraint firstAttribute="height" constant="40" id="tWf-a9-tdG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="target" translatesAutoresizingMaskIntoConstraints="NO" id="fXo-nN-Ky0" userLabel="finish">
+                                <rect key="frame" x="470.5" y="167.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="fqc-0L-Rzy"/>
+                                    <constraint firstAttribute="height" constant="40" id="ieE-9K-TLb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o7u-jS-ZRE" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" id="0TL-mL-iEV"/>
+                            <constraint firstItem="4Mb-2b-sYD" firstAttribute="width" secondItem="6OC-xT-CiT" secondAttribute="width" id="2Mp-ra-1ng"/>
+                            <constraint firstItem="o7u-jS-ZRE" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" id="BIH-ut-gWr"/>
+                            <constraint firstItem="fXo-nN-Ky0" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" id="Fya-YJ-TnJ"/>
+                            <constraint firstItem="o7u-jS-ZRE" firstAttribute="leading" secondItem="fXo-nN-Ky0" secondAttribute="trailing" constant="-200" id="Peg-Cp-EhG"/>
+                            <constraint firstItem="N4c-kN-pg7" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" id="SZp-F1-H7W"/>
+                            <constraint firstItem="4Mb-2b-sYD" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" id="Ubp-OT-qlU"/>
+                            <constraint firstItem="N4c-kN-pg7" firstAttribute="leading" secondItem="o7u-jS-ZRE" secondAttribute="trailing" constant="-200" id="fIQ-ql-zCD"/>
+                            <constraint firstItem="4Mb-2b-sYD" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" id="wh0-C3-EK7"/>
+                            <constraint firstItem="4Mb-2b-sYD" firstAttribute="height" secondItem="6OC-xT-CiT" secondAttribute="height" id="z12-Z8-aGU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="m4Q-w7-jb9"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="4Mb-2b-sYD" id="vv5-ad-bax"/>
+                        <outlet property="finishImage" destination="fXo-nN-Ky0" id="gBD-nt-8Ww"/>
+                        <outlet property="highlightView" destination="fib-0g-OhI" id="MeX-Cr-2Xu"/>
+                        <outlet property="initImage" destination="N4c-kN-pg7" id="sG7-p5-NwS"/>
+                        <outlet property="readyButton" destination="o7u-jS-ZRE" id="Ak3-6T-vPn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RiS-YA-5AQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="87h-q4-rVG">
+                    <connections>
+                        <action selector="userTapped:" destination="CIY-Er-zVk" id="XJP-cF-JxA"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1152.34375" y="136.5234375"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="target" width="512" height="512"/>
+    </resources>
 </document>
