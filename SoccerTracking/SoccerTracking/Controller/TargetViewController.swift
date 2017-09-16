@@ -11,7 +11,15 @@ import Vision
 import UIKit
 
 class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    
+    var contando:Bool = false
 
+    @IBOutlet weak var informationLabel: UILabel!
+    @IBOutlet weak var distanceTextField: UITextField!
+    @IBOutlet weak var okDistanceButton: UIButton!
+    @IBOutlet weak var insertDistanceView: UIView!
+    @IBOutlet weak var finishLineImage: UIImageView!
+    @IBOutlet weak var initLineImage: UIImageView!
     @IBOutlet weak var finishImage: UIImageView!
     @IBOutlet weak var initImage: UIImageView!
     @IBOutlet weak var readyButton: UIButton!
@@ -37,6 +45,10 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         return session
     }()
     
+    var start : DispatchTime!
+    var end : DispatchTime!
+    var now : DispatchTime!
+    
     @IBAction func userTapped(_ sender: UITapGestureRecognizer) {
         // get the center of the tap
         self.highlightView?.frame.size = CGSize(width: 120, height: 120)
@@ -55,7 +67,17 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        finishLineImage.alpha = CGFloat(0)
+        finishImage.alpha = CGFloat(0)
+        insertDistanceView.layer.cornerRadius = 5
+        okDistanceButton.layer.cornerRadius = 5
+        informationLabel.layer.cornerRadius = 50
+        
+        
+        informationLabel.text = "Arraste os marcadores para os pontos de largada e chegada"
+        informationLabel.backgroundColor?.withAlphaComponent(CGFloat(0.4))
+        
+        insertDistanceView.alpha = CGFloat(0)
         
         // hide the red focus area on load
         self.highlightView?.frame = .zero
@@ -73,9 +95,10 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         finishImage.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(TargetViewController.drag(_:))))
         initImage.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(TargetViewController.drag(_:))))
+        
        
         
-        readyButton.layer.cornerRadius = 5
+        
         
     }
     
@@ -126,6 +149,12 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             // move the highlight view
             self.highlightView?.frame = convertedRect
+            
+            if(self.contando) {
+                self.setDistance()
+            }
+            
+
         }
     }
     
@@ -136,20 +165,83 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         self.cameraLayer.frame = self.cameraView?.bounds ?? .zero
     }
     
-    @IBAction func readyButtonClicked(_ sender: Any) {
+//    @IBAction func readyButtonClicked(_ sender: Any) {
+//
+//        let finishPosition = finishImage.center
+//        let initPosition = initImage.center
+//
+//
+//        print(finishPosition)
+//        print(initPosition)
+//
+//        readyButton.layer.opacity = 0
+//
+//    }
+    @IBAction func okDistanceButtonClicked(_ sender: UIButton) {
+        
+        let finishPosition = finishImage.center
+        let initPosition = initImage.center
+
+
+        print(finishPosition)
+        print(initPosition)
+        
+        let distance = Double(distanceTextField.text!)!
+        
+        print(distance)
+        
+        insertDistanceView.removeFromSuperview()
+    }
+    
+    func setDistance() {
+        
+        self.now = DispatchTime.now()
+        
+        let nanoTime = now.uptimeNanoseconds - start.uptimeNanoseconds
+        let timeInterval = Double(nanoTime) / 1_000_000_000 // Technically could overflow for long running tests
+        
+        guard timeInterval > 0 else { return }
+        
+        let distanceBetweenMarkersInMeters = 50
         
         let finishPosition = finishImage.center
         let initPosition = initImage.center
         
+        let distanceBetweenMarkersInPixels = finishPosition.x - initPosition.x
         
-        print(finishPosition)
-        print(initPosition)
+        let distanceRanSoFar = ((highlightView?.frame.minX)! + (highlightView?.frame.width)! / 2) - initPosition.x
         
-        readyButton.layer.opacity = 0
-
+        let percentageRan = distanceRanSoFar / distanceBetweenMarkersInPixels
+        print(percentageRan)
+        if percentageRan >= 1 {
+            contando = false
+        }
+        
     }
     
+    
+    @IBAction func beginEditingDistanceTextField(_ sender: UITextField) {
+        
+    }
+    
+    @IBAction func valueChangedDistanceTextField(_ sender: Any) {
+        print("eu")
+    }
     @objc func drag(_ recognizer:UIPanGestureRecognizer) {
+        
+        if(recognizer.state == .ended) {
+            if(recognizer.view == self.initImage) {
+                finishLineImage.alpha = CGFloat(1)
+                finishImage.alpha = CGFloat(1)
+                //informationLabel.text = "Arraste o marcador para o ponto de chegada"
+            }
+            if(recognizer.view == self.finishImage) {
+                //insertDistanceView.alpha = CGFloat(1)
+                contando = true
+                start = DispatchTime.now()
+                
+            }
+        }
 
         
         let translation = recognizer.translation(in: self.view)
@@ -158,5 +250,8 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
                                   y:view.center.y + translation.y)
         }
         recognizer.setTranslation(CGPoint(x:0, y:0), in: self.view)
+        
+        initLineImage.center.x = initImage.center.x
+        finishLineImage.center.x = finishImage.center.x
     }
 }
