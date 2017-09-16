@@ -55,6 +55,8 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
         // hide the red focus area on load
         self.highlightView?.frame = .zero
         
