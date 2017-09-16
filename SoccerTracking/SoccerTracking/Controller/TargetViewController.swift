@@ -59,7 +59,6 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         self.playButton.alpha = CGFloat(0)
         insertDistanceView.layer.cornerRadius = 5
         okDistanceButton.layer.cornerRadius = 5
-        informationLabel.layer.cornerRadius = 50
         
         
         informationLabel.text = "Arraste os marcadores para os pontos de largada e chegada"
@@ -219,6 +218,7 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         let percentageRan = distanceRanSoFar / distanceBetweenMarkersInPixels
         print(percentageRan)
         
+        //informationLabel.text = "\(timeInterval)s"
         runningData.append((Double(distanceBetweenMarkersInMeters) * Double(percentageRan), timeInterval))
         if percentageRan >= 1 {
             contando = false

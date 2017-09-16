@@ -88,7 +88,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gew-Nd-CI1" userLabel="informationLabel">
-                                <rect key="frame" x="10" y="30" width="814" height="40"/>
+                                <rect key="frame" x="20" y="30" width="794" height="40"/>
                                 <color key="backgroundColor" red="0.055704094469547272" green="0.019607163965702057" blue="0.011001070030033588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="T4F-mj-5Vc"/>
@@ -156,13 +156,14 @@
                         <constraints>
                             <constraint firstItem="4Mb-2b-sYD" firstAttribute="width" secondItem="6OC-xT-CiT" secondAttribute="width" id="2Mp-ra-1ng"/>
                             <constraint firstItem="UYy-Ub-lpT" firstAttribute="width" secondItem="gys-CQ-gP3" secondAttribute="width" multiplier="1.3" id="3xE-wk-GaE"/>
+                            <constraint firstItem="Gew-Nd-CI1" firstAttribute="leading" secondItem="m4Q-w7-jb9" secondAttribute="leading" constant="20" id="DVl-ze-VMT"/>
                             <constraint firstItem="fXo-nN-Ky0" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" id="Fya-YJ-TnJ"/>
                             <constraint firstItem="0I7-dr-MjJ" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" id="RYk-Fk-szc"/>
                             <constraint firstItem="N4c-kN-pg7" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" id="SZp-F1-H7W"/>
                             <constraint firstItem="4Dc-kI-WKk" firstAttribute="centerX" secondItem="N4c-kN-pg7" secondAttribute="centerX" id="UF8-ni-1m2"/>
+                            <constraint firstItem="m4Q-w7-jb9" firstAttribute="trailing" secondItem="Gew-Nd-CI1" secondAttribute="trailing" constant="20" id="Uag-aC-eHx"/>
                             <constraint firstItem="4Mb-2b-sYD" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" id="Ubp-OT-qlU"/>
                             <constraint firstItem="m4Q-w7-jb9" firstAttribute="trailing" secondItem="UYy-Ub-lpT" secondAttribute="trailing" constant="10" id="VsO-1H-1vn"/>
-                            <constraint firstItem="Gew-Nd-CI1" firstAttribute="leading" secondItem="m4Q-w7-jb9" secondAttribute="leading" constant="10" id="XKb-fO-kbH"/>
                             <constraint firstItem="OGe-Sz-xXs" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" constant="100" id="Xhv-pZ-76E"/>
                             <constraint firstItem="m4Q-w7-jb9" firstAttribute="trailing" secondItem="gys-CQ-gP3" secondAttribute="trailing" constant="10" id="bNQ-Q9-EQL"/>
                             <constraint firstItem="Gew-Nd-CI1" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" id="cXl-fu-0hX"/>
@@ -172,7 +173,6 @@
                             <constraint firstItem="N4c-kN-pg7" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" constant="-100" id="i6D-sC-Fxf"/>
                             <constraint firstItem="m4Q-w7-jb9" firstAttribute="bottom" secondItem="gys-CQ-gP3" secondAttribute="bottom" constant="10" id="jnQ-Bf-Yhq"/>
                             <constraint firstItem="OGe-Sz-xXs" firstAttribute="bottomMargin" secondItem="m4Q-w7-jb9" secondAttribute="bottom" id="lpf-F2-u6F"/>
-                            <constraint firstItem="m4Q-w7-jb9" firstAttribute="trailing" secondItem="Gew-Nd-CI1" secondAttribute="trailing" constant="10" id="tlZ-qA-SSC"/>
                             <constraint firstItem="4Mb-2b-sYD" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" id="wh0-C3-EK7"/>
                             <constraint firstItem="4Dc-kI-WKk" firstAttribute="top" secondItem="OGe-Sz-xXs" secondAttribute="top" id="y9H-ct-Keb"/>
                             <constraint firstItem="0I7-dr-MjJ" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" constant="-20" id="yqM-0l-Xa6"/>
