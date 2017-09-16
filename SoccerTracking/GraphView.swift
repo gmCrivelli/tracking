@@ -30,12 +30,13 @@ class GraphView: UIView {
         let width = rect.width
         let height = rect.height
         
-        // This path makes graphs borders round
+        //This path makes graphs borders round
         let path = UIBezierPath(roundedRect: rect,
                                 byRoundingCorners: .allCorners,
                                 cornerRadii: Constants.cornerRadiusSize)
         path.addClip()
         
+        //draws gradient behind graph
         let context = UIGraphicsGetCurrentContext()
         let colors = [startColor.cgColor, endColor.cgColor]
         let colorSpace = CGColorSpaceCreateDeviceRGB()
@@ -45,7 +46,6 @@ class GraphView: UIView {
                                   locations: colorLocations)!
         let startPoint = CGPoint.zero
         let endPoint = CGPoint(x: 0, y: bounds.height)
-        
         context?.drawLinearGradient(gradient,
                                     start: startPoint,
                                     end: endPoint,
@@ -71,7 +71,6 @@ class GraphView: UIView {
         let graphHeight = height - topBorder - bottomBorder
         let maxY = (graphPoints.last as (Double,Double)!).1
         
-        //ALTERAR ISSO
         let columnYPoint = { (graphPoint: Double) -> CGFloat in
             let y = CGFloat(graphPoint) / CGFloat(maxY) * graphHeight
             return graphHeight + topBorder - y // Flip the graph
@@ -99,8 +98,8 @@ class GraphView: UIView {
         let clippingPath = graphPath.copy() as! UIBezierPath
         
         //3 - add lines to the copied path to complete the clip area
-        //clippingPath.addLine(to: CGPoint(x:columnXPoint(graphPoints.count - 1), y:height))
-        //clippingPath.addLine(to: CGPoint(x:columnXPoint(0), y:height))
+        clippingPath.addLine(to: CGPoint(x:columnXPoint(Double(graphPoints.count - 1)), y:height))
+        clippingPath.addLine(to: CGPoint(x:columnXPoint(0), y:height))
         clippingPath.close()
         
         //4 - add the clipping path to the context
@@ -118,20 +117,10 @@ class GraphView: UIView {
         graphPath.lineWidth = 2.0
         graphPath.stroke()
         
-        //Draw the circles on top of the graph stroke
-        /*
-        for i in 0..<graphPoints.count {
-            var point = CGPoint(x: columnXPoint(i), y: columnYPoint(graphPoints[i]))
-            point.x -= Constants.circleDiameter / 2
-            point.y -= Constants.circleDiameter / 2
-            
-            let circle = UIBezierPath(ovalIn: CGRect(origin: point, size: CGSize(width: Constants.circleDiameter, height: Constants.circleDiameter)))
-            circle.fill()
-        }*/
-        
         //Draw horizontal graph lines on the top of everything
         let linePath = UIBezierPath()
         
+        /*
         //top line
         linePath.move(to: CGPoint(x: margin, y: topBorder))
         linePath.addLine(to: CGPoint(x: width - margin, y: topBorder))
@@ -143,11 +132,12 @@ class GraphView: UIView {
         //bottom line
         linePath.move(to: CGPoint(x: margin, y:height - bottomBorder))
         linePath.addLine(to: CGPoint(x:  width - margin, y: height - bottomBorder))
+        
+        
         let color = UIColor(white: 1.0, alpha: Constants.colorAlpha)
         color.setStroke()
-        
         linePath.lineWidth = 1.0
-        linePath.stroke()
+        linePath.stroke()*/
         
     }
 
