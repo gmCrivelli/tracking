@@ -37,6 +37,9 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         return session
     }()
     
+    var startPoint : CGPoint = CGPoint.zero
+    var finishPoint : CGPoint = CGPoint.zero
+    
     @IBAction func userTapped(_ sender: UITapGestureRecognizer) {
         // get the center of the tap
         self.highlightView?.frame.size = CGSize(width: 120, height: 120)
@@ -126,6 +129,30 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             // move the highlight view
             self.highlightView?.frame = convertedRect
+            
+            let vec1 : CGVector = CGVector(dx: self.finishPoint.x - self.startPoint.x, dy: self.finishPoint.y - self.startPoint.y)
+            let vec2 : CGVector = CGVector(dx: convertedRect.minX + convertedRect.width / 2 - self.startPoint.x, dy: convertedRect.minY + convertedRect.height / 2 - self.startPoint.y)
+        
+            
+            let theta1 : Float = atan2f(Float(vec1.dy), Float(vec1.dx))
+            let theta2 : Float = atan2f(Float(vec2.dy), Float(vec2.dx))
+        
+            
+            let angle = Double(theta1 - theta2)
+            let vec1length = sqrt(vec1.dx * vec1.dx + vec1.dy * vec1.dy)
+            let vec2length = sqrt(vec2.dx * vec2.dx + vec2.dy * vec2.dy)
+            let projection = cos(angle) * Double(vec2length)
+            let percentage = projection / Double(vec1length)
+            
+            print(percentage * 100)
+            
+            if percentage >= 1 {
+                let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+            print("angle: %.1f°, ", angle / M_PI * 180)
         }
     }
     
@@ -138,20 +165,17 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     @IBAction func readyButtonClicked(_ sender: Any) {
         
-        let finishPosition = finishImage.center
-        let initPosition = initImage.center
+        self.startPoint = initImage.center
+        self.finishPoint = finishImage.center
         
+        print(initImage.center)
+        print(finishImage.center)
         
-        print(finishPosition)
-        print(initPosition)
-        
-        readyButton.removeFromSuperview()
+        //readyButton.removeFromSuperview()
         
     }
     
     @objc func drag(_ recognizer:UIPanGestureRecognizer) {
-
-        
         let translation = recognizer.translation(in: self.view)
         if let view = recognizer.view {
             view.center = CGPoint(x:view.center.x + translation.x,
