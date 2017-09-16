@@ -27,7 +27,7 @@ class ResultsViewController: UIViewController, UIScrollViewDelegate {
         createVelocityTimeData()
         createVelocityDistanceData()
         
-        print(velocityDistanceData, distanceTimeData, velocityTimeData)
+        print(distanceTimeData, velocityDistanceData, velocityTimeData)
         
         graphVelocityTime.graphPoints = velocityTimeData
         graphDistanceTempo.graphPoints = distanceTimeData

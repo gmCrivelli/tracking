@@ -59,6 +59,7 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         self.playButton.alpha = CGFloat(0)
         insertDistanceView.layer.cornerRadius = 5
         okDistanceButton.layer.cornerRadius = 5
+        informationLabel.layer.cornerRadius = 50
         
         
         informationLabel.text = "Arraste os marcadores para os pontos de largada e chegada"
@@ -218,8 +219,12 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         let percentageRan = distanceRanSoFar / distanceBetweenMarkersInPixels
         print(percentageRan)
         
-        //informationLabel.text = "\(timeInterval)s"
-        runningData.append((Double(distanceBetweenMarkersInMeters) * Double(percentageRan), timeInterval))
+        //validation of data
+        let dist:Double = (Double(distanceBetweenMarkersInMeters) * Double(percentageRan))
+        if(runningData.count < 5 || abs((runningData.last?.0)! - dist) < 0.6) {
+            runningData.append((dist, timeInterval))
+        }
+        
         if percentageRan >= 1 {
             contando = false
             performSegue(withIdentifier: "showGraph", sender: nil)
@@ -227,6 +232,14 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         
         
+    }
+    
+    func standardDeviation(_ arr: [Double]) -> Double
+    {
+        let length = Double(arr.count)
+        let avg = arr.reduce(0, {$0 + $1}) / length
+        let sumOfSquaredAvgDiff = arr.map { pow($0 - avg, 2.0)}.reduce(0, {$0 + $1})
+        return sqrt(sumOfSquaredAvgDiff / length)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
