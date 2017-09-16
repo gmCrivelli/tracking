@@ -222,11 +222,19 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         runningData.append((Double(distanceBetweenMarkersInMeters) * Double(percentageRan), timeInterval))
         if percentageRan >= 1 {
             contando = false
-            print("Olhaaaaaaa: \(runningData)")
+            performSegue(withIdentifier: "showGraph", sender: nil)
         }
         
         
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "showGraph") {
+            if let vc = segue.destination as? ResultsViewController {
+                vc.distanceTimeData = self.runningData
+            }
+        }
     }
     
     @IBAction func playButtonClicked(_ sender: UIButton) {
