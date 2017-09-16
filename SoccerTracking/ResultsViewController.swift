@@ -10,9 +10,9 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
-    @IBOutlet weak var graphDistanceTempo: UIView!
-    @IBOutlet weak var graphVelocityTime: UIView!
-    @IBOutlet weak var graphVelocityDistance: UIView!
+    @IBOutlet weak var graphDistanceTempo: GraphView!
+    @IBOutlet weak var graphVelocityTime: GraphView!
+    @IBOutlet weak var graphVelocityDistance: GraphView!
     
     var distanceTimeData:[(Double, Double)] = []
     var velocityTimeData:[(Double, Double)] = []
@@ -23,6 +23,16 @@ class ResultsViewController: UIViewController {
         
         createVelocityTimeData()
         createVelocityDistanceData()
+        
+        print(velocityDistanceData, distanceTimeData, velocityTimeData)
+        
+        graphVelocityTime.graphPoints = velocityTimeData
+        graphDistanceTempo.graphPoints = distanceTimeData
+        graphVelocityDistance.graphPoints = velocityDistanceData
+        
+        graphVelocityDistance.setNeedsDisplay()
+        graphDistanceTempo.setNeedsDisplay()
+        graphVelocityTime.setNeedsDisplay()
     }
     
     func createVelocityTimeData() {
@@ -39,7 +49,7 @@ class ResultsViewController: UIViewController {
         
         for i in 0..<distanceTimeData.count {
             let newElement = (velocityTimeData[i].0,distanceTimeData[i].0)
-            velocityTimeData.append(newElement)
+            velocityDistanceData.append(newElement)
         }
     }
 }
