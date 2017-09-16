@@ -13,7 +13,9 @@ import UIKit
 class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     var contando:Bool = false
+    var runningData:[(Double, Double)] = [] //Distance x time
 
+    @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var distanceTextField: UITextField!
     @IBOutlet weak var okDistanceButton: UIButton!
@@ -49,26 +51,12 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     var end : DispatchTime!
     var now : DispatchTime!
     
-    @IBAction func userTapped(_ sender: UITapGestureRecognizer) {
-        // get the center of the tap
-        self.highlightView?.frame.size = CGSize(width: 120, height: 120)
-        self.highlightView?.center = sender.location(in: self.view)
-        
-        // convert the rect for the initial observation
-        let originalRect = self.highlightView?.frame ?? .zero
-        var convertedRect = self.cameraLayer.metadataOutputRectConverted(fromLayerRect: originalRect)
-        convertedRect.origin.y = 1 - convertedRect.origin.y
-        
-        // set the observation
-        let newObservation = VNDetectedObjectObservation(boundingBox: convertedRect)
-        self.lastObservation = newObservation
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         finishLineImage.alpha = CGFloat(0)
         finishImage.alpha = CGFloat(0)
+        self.playButton.alpha = CGFloat(0)
         insertDistanceView.layer.cornerRadius = 5
         okDistanceButton.layer.cornerRadius = 5
         informationLabel.layer.cornerRadius = 50
@@ -96,11 +84,28 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         finishImage.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(TargetViewController.drag(_:))))
         initImage.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(TargetViewController.drag(_:))))
         
-       
+        
         
         
         
     }
+    
+    @IBAction func userTapped(_ sender: UITapGestureRecognizer) {
+        // get the center of the tap
+        self.highlightView?.frame.size = CGSize(width: 120, height: 120)
+        self.highlightView?.center = sender.location(in: self.view)
+        
+        // convert the rect for the initial observation
+        let originalRect = self.highlightView?.frame ?? .zero
+        var convertedRect = self.cameraLayer.metadataOutputRectConverted(fromLayerRect: originalRect)
+        convertedRect.origin.y = 1 - convertedRect.origin.y
+        
+        // set the observation
+        let newObservation = VNDetectedObjectObservation(boundingBox: convertedRect)
+        self.lastObservation = newObservation
+    }
+    
+    
     
     private var lastObservation: VNDetectedObjectObservation?
     
@@ -213,12 +218,21 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         let percentageRan = distanceRanSoFar / distanceBetweenMarkersInPixels
         print(percentageRan)
+        
+        runningData.append((Double(distanceBetweenMarkersInMeters) * Double(percentageRan), timeInterval))
         if percentageRan >= 1 {
             contando = false
+            print("Olhaaaaaaa: \(runningData)")
         }
+        
+        
         
     }
     
+    @IBAction func playButtonClicked(_ sender: UIButton) {
+        contando = true
+        start = DispatchTime.now()
+    }
     
     @IBAction func beginEditingDistanceTextField(_ sender: UITextField) {
         
@@ -237,8 +251,8 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             }
             if(recognizer.view == self.finishImage) {
                 //insertDistanceView.alpha = CGFloat(1)
-                contando = true
-                start = DispatchTime.now()
+                
+                self.playButton.alpha = CGFloat(1)
                 
             }
         }

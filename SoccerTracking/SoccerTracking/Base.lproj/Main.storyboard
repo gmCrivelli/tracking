@@ -8,6 +8,7 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,7 +61,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gys-CQ-gP3" userLabel="graphButton">
-                                <rect key="frame" x="672" y="928" width="86" height="86"/>
+                                <rect key="frame" x="647" y="903" width="111" height="111"/>
                                 <state key="normal" image="graphIcon"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="linha" translatesAutoresizingMaskIntoConstraints="NO" id="4Dc-kI-WKk" userLabel="linhaInicio">
@@ -143,21 +144,31 @@
                                     <constraint firstAttribute="trailing" secondItem="dD6-4r-Esr" secondAttribute="trailing" constant="10" id="xu1-Ij-lgX"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYy-Ub-lpT">
+                                <rect key="frame" x="614" y="749" width="144" height="144"/>
+                                <state key="normal" image="playButton"/>
+                                <connections>
+                                    <action selector="playButtonClicked:" destination="CIY-Er-zVk" eventType="touchUpInside" id="Z0p-HC-phQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4Mb-2b-sYD" firstAttribute="width" secondItem="6OC-xT-CiT" secondAttribute="width" id="2Mp-ra-1ng"/>
+                            <constraint firstItem="UYy-Ub-lpT" firstAttribute="width" secondItem="gys-CQ-gP3" secondAttribute="width" multiplier="1.3" id="3xE-wk-GaE"/>
                             <constraint firstItem="fXo-nN-Ky0" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" id="Fya-YJ-TnJ"/>
                             <constraint firstItem="0I7-dr-MjJ" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" id="RYk-Fk-szc"/>
                             <constraint firstItem="N4c-kN-pg7" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" id="SZp-F1-H7W"/>
                             <constraint firstItem="4Dc-kI-WKk" firstAttribute="centerX" secondItem="N4c-kN-pg7" secondAttribute="centerX" id="UF8-ni-1m2"/>
                             <constraint firstItem="4Mb-2b-sYD" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" id="Ubp-OT-qlU"/>
+                            <constraint firstItem="m4Q-w7-jb9" firstAttribute="trailing" secondItem="UYy-Ub-lpT" secondAttribute="trailing" constant="10" id="VsO-1H-1vn"/>
                             <constraint firstItem="Gew-Nd-CI1" firstAttribute="leading" secondItem="m4Q-w7-jb9" secondAttribute="leading" constant="10" id="XKb-fO-kbH"/>
                             <constraint firstItem="OGe-Sz-xXs" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" constant="100" id="Xhv-pZ-76E"/>
                             <constraint firstItem="m4Q-w7-jb9" firstAttribute="trailing" secondItem="gys-CQ-gP3" secondAttribute="trailing" constant="10" id="bNQ-Q9-EQL"/>
                             <constraint firstItem="Gew-Nd-CI1" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" id="cXl-fu-0hX"/>
                             <constraint firstItem="Gew-Nd-CI1" firstAttribute="top" secondItem="m4Q-w7-jb9" secondAttribute="top" constant="10" id="cfz-Rx-Jfk"/>
                             <constraint firstItem="fXo-nN-Ky0" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" constant="100" id="dyn-id-vOg"/>
+                            <constraint firstItem="gys-CQ-gP3" firstAttribute="top" secondItem="UYy-Ub-lpT" secondAttribute="bottom" constant="10" id="g0L-rl-H6g"/>
                             <constraint firstItem="N4c-kN-pg7" firstAttribute="centerX" secondItem="m4Q-w7-jb9" secondAttribute="centerX" constant="-100" id="i6D-sC-Fxf"/>
                             <constraint firstItem="m4Q-w7-jb9" firstAttribute="bottom" secondItem="gys-CQ-gP3" secondAttribute="bottom" constant="10" id="jnQ-Bf-Yhq"/>
                             <constraint firstItem="OGe-Sz-xXs" firstAttribute="bottomMargin" secondItem="m4Q-w7-jb9" secondAttribute="bottom" id="lpf-F2-u6F"/>
@@ -166,6 +177,7 @@
                             <constraint firstItem="4Dc-kI-WKk" firstAttribute="top" secondItem="OGe-Sz-xXs" secondAttribute="top" id="y9H-ct-Keb"/>
                             <constraint firstItem="0I7-dr-MjJ" firstAttribute="centerY" secondItem="m4Q-w7-jb9" secondAttribute="centerY" constant="-20" id="yqM-0l-Xa6"/>
                             <constraint firstItem="4Mb-2b-sYD" firstAttribute="height" secondItem="6OC-xT-CiT" secondAttribute="height" id="z12-Z8-aGU"/>
+                            <constraint firstItem="UYy-Ub-lpT" firstAttribute="height" secondItem="gys-CQ-gP3" secondAttribute="height" multiplier="1.3" id="zHM-94-ycf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m4Q-w7-jb9"/>
                     </view>
@@ -180,6 +192,7 @@
                         <outlet property="initLineImage" destination="4Dc-kI-WKk" id="2bu-He-hrm"/>
                         <outlet property="insertDistanceView" destination="0I7-dr-MjJ" id="OVx-gN-8KQ"/>
                         <outlet property="okDistanceButton" destination="pQy-QL-eiE" id="Hiv-Tp-30R"/>
+                        <outlet property="playButton" destination="UYy-Ub-lpT" id="rPC-7F-Y4P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RiS-YA-5AQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -197,5 +210,6 @@
         <image name="graphIcon" width="86" height="86"/>
         <image name="inicio" width="100" height="131"/>
         <image name="linha" width="6" height="1038"/>
+        <image name="playButton" width="144" height="144"/>
     </resources>
 </document>
