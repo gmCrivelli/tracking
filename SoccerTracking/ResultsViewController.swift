@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ResultsViewController: UIViewController {
+class ResultsViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var graphDistanceTempo: GraphView!
     @IBOutlet weak var graphVelocityTime: GraphView!
     @IBOutlet weak var graphVelocityDistance: GraphView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var graphLabel: UILabel!
     
     var distanceTimeData:[(Double, Double)] = []
     var velocityTimeData:[(Double, Double)] = []
@@ -33,6 +36,24 @@ class ResultsViewController: UIViewController {
         graphVelocityDistance.setNeedsDisplay()
         graphDistanceTempo.setNeedsDisplay()
         graphVelocityTime.setNeedsDisplay()
+        
+        
+        graphDistanceTempo.frame = (graphDistanceTempo.frame.offsetBy(dx: scrollView.contentSize.width, dy: 0))
+        scrollView.addSubview(graphDistanceTempo)
+        scrollView.contentSize = CGSize(width: scrollView.contentSize.width + self.view.frame.width, height: (graphDistanceTempo.frame.height))
+        
+        graphVelocityTime.frame = (graphVelocityTime.frame.offsetBy(dx: scrollView.contentSize.width, dy: 0))
+        scrollView.addSubview(graphVelocityTime)
+        scrollView.contentSize = CGSize(width: scrollView.contentSize.width + self.view.frame.width, height: ( graphVelocityTime.frame.height))
+       
+        
+        
+        graphVelocityDistance.frame = (graphVelocityDistance.frame.offsetBy(dx: scrollView.contentSize.width, dy: 0))
+        scrollView.addSubview(graphVelocityDistance)
+        scrollView.contentSize = CGSize(width: scrollView.contentSize.width + self.view.frame.width, height: (graphVelocityDistance.frame.height))
+        
+        
+        pageControl.layer.cornerRadius = 10
     }
     
     func createVelocityTimeData() {
@@ -52,4 +73,26 @@ class ResultsViewController: UIViewController {
             velocityDistanceData.append(newElement)
         }
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        
+        
+        let page = floor(scrollView.contentOffset.x / self.view.frame.width)
+        
+        pageControl.currentPage = Int(page)
+        if(Int(page) == 0) {
+            graphLabel.text = "Distância x Tempo"
+        }
+        else if(Int(page) == 1)  {
+            graphLabel.text = "Velocidade x Tempo"
+        }
+        else {
+            graphLabel.text = "Velocidade x Distância"
+        }
+        
+        
+    }
+    
+    
 }
