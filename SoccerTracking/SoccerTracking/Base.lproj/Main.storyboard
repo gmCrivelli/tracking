@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CIY-Er-zVk">
-    <device id="ipad9_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CIY-Er-zVk">
+    <device id="ipad10_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,7 +18,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SoccerTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="RenderView" customModule="GPUImage">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -44,11 +44,11 @@
             <objects>
                 <viewController id="CIY-Er-zVk" customClass="TargetViewController" customModule="SoccerTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6OC-xT-CiT">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-2b-sYD" userLabel="cameraView">
-                                <rect key="frame" x="0.0" y="10" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="10" width="834" height="1112"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -61,34 +61,34 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gys-CQ-gP3" userLabel="graphButton">
-                                <rect key="frame" x="647" y="903" width="111" height="111"/>
+                                <rect key="frame" x="713" y="991" width="111" height="111"/>
                                 <state key="normal" image="graphIcon"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="linha" translatesAutoresizingMaskIntoConstraints="NO" id="4Dc-kI-WKk" userLabel="linhaInicio">
-                                <rect key="frame" x="280" y="-6" width="8" height="1038"/>
+                                <rect key="frame" x="313" y="82" width="8" height="1038"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="8" id="YYa-2E-XNy"/>
                                 </constraints>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inicio" translatesAutoresizingMaskIntoConstraints="NO" id="N4c-kN-pg7" userLabel="init">
-                                <rect key="frame" x="234" y="472" width="100" height="100"/>
+                                <rect key="frame" x="267" y="516" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="6CG-5t-5rH"/>
                                     <constraint firstAttribute="height" constant="100" id="tWf-a9-tdG"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linha" translatesAutoresizingMaskIntoConstraints="NO" id="OGe-Sz-xXs" userLabel="linhaFim">
-                                <rect key="frame" x="481" y="-6" width="6" height="1038"/>
+                                <rect key="frame" x="514" y="82" width="6" height="1038"/>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="final" translatesAutoresizingMaskIntoConstraints="NO" id="fXo-nN-Ky0" userLabel="finish">
-                                <rect key="frame" x="434" y="472" width="100" height="100"/>
+                                <rect key="frame" x="467" y="516" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="fqc-0L-Rzy"/>
                                     <constraint firstAttribute="height" constant="100" id="ieE-9K-TLb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gew-Nd-CI1" userLabel="informationLabel">
-                                <rect key="frame" x="10" y="30" width="748" height="40"/>
+                                <rect key="frame" x="10" y="30" width="814" height="40"/>
                                 <color key="backgroundColor" red="0.055704094469547272" green="0.019607163965702057" blue="0.011001070030033588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="T4F-mj-5Vc"/>
@@ -98,7 +98,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0I7-dr-MjJ" userLabel="insertDistance">
-                                <rect key="frame" x="284" y="427" width="200" height="150"/>
+                                <rect key="frame" x="317" y="471" width="200" height="150"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1U-Zo-9fr" userLabel="distanceTextField">
                                         <rect key="frame" x="10" y="60" width="180" height="30"/>
@@ -145,7 +145,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYy-Ub-lpT">
-                                <rect key="frame" x="614" y="749" width="144" height="144"/>
+                                <rect key="frame" x="680" y="837" width="144" height="144"/>
                                 <state key="normal" image="playButton"/>
                                 <connections>
                                     <action selector="playButtonClicked:" destination="CIY-Er-zVk" eventType="touchUpInside" id="Z0p-HC-phQ"/>
@@ -210,7 +210,7 @@
             <objects>
                 <viewController id="3bA-0M-oMq" customClass="ResultsViewController" customModule="SoccerTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vmf-sN-BZU">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corrida 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pht-EH-Mi4">
@@ -226,7 +226,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E4k-ZM-9DU" userLabel="distanceTempo" customClass="GraphView" customModule="SoccerTracking" customModuleProvider="target">
-                                <rect key="frame" x="20" y="506" width="224" height="128"/>
+                                <rect key="frame" x="43" y="0.0" width="750" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -239,7 +239,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0D-Vm-uRj" userLabel="velocityTempo" customClass="GraphView" customModule="SoccerTracking" customModuleProvider="target">
-                                <rect key="frame" x="275" y="506" width="212" height="128"/>
+                                <rect key="frame" x="43" y="0.0" width="750" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -252,7 +252,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3f-DX-hRV" userLabel="velocityDistance" customClass="GraphView" customModule="SoccerTracking" customModuleProvider="target">
-                                <rect key="frame" x="515" y="506" width="226" height="128"/>
+                                <rect key="frame" x="43" y="0.0" width="750" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -264,60 +264,109 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distância x Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObG-qL-85f">
-                                <rect key="frame" x="52" y="448" width="177" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distância x Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn9-ie-p0u">
+                                <rect key="frame" x="334" y="387" width="166" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocidade x Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swa-15-pr5">
-                                <rect key="frame" x="295" y="448" width="212" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="velcoimetro" translatesAutoresizingMaskIntoConstraints="NO" id="r4G-Eu-7rN">
+                                <rect key="frame" x="263" y="270" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocidade x Distância" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn9-ie-p0u">
-                                <rect key="frame" x="522" y="447" width="226" height="21"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setas" translatesAutoresizingMaskIntoConstraints="NO" id="lfi-pj-2QZ">
+                                <rect key="frame" x="263" y="110" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50.0 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chl-a0-tHX">
-                                <rect key="frame" x="355" y="165" width="53" height="21"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="relogio" translatesAutoresizingMaskIntoConstraints="NO" id="Wca-Xk-z0o">
+                                <rect key="frame" x="446" y="110" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrancada" translatesAutoresizingMaskIntoConstraints="NO" id="ulg-8j-2q8">
+                                <rect key="frame" x="263" y="189" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLZ-dr-aHp">
+                                <rect key="frame" x="521" y="124" width="53" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkk-OS-a79">
+                                <rect key="frame" x="339" y="278" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aP-dg-C3s">
+                                <rect key="frame" x="342" y="206" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEU-60-mCT">
+                                <rect key="frame" x="0.0" y="422.5" width="834" height="689.5"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3bA-0M-oMq" id="NS9-rI-4gc"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="GXI-xJ-iee">
+                                <rect key="frame" x="387" y="1065" width="60" height="37"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="pageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.29161241319444442" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50.0 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chl-a0-tHX">
+                                <rect key="frame" x="339" y="125" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94891661405563354" green="0.94907897710800171" blue="0.94890636205673218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yn9-ie-p0u" firstAttribute="centerX" secondItem="ox0-zg-pJK" secondAttribute="centerX" id="26D-IJ-2Np"/>
                             <constraint firstItem="Pht-EH-Mi4" firstAttribute="leading" secondItem="ox0-zg-pJK" secondAttribute="leading" constant="10" id="5zl-m5-sm6"/>
                             <constraint firstItem="Pht-EH-Mi4" firstAttribute="top" secondItem="ox0-zg-pJK" secondAttribute="top" constant="10" id="9eN-ps-i2T"/>
+                            <constraint firstItem="qEU-60-mCT" firstAttribute="leading" secondItem="ox0-zg-pJK" secondAttribute="leading" id="GP4-aE-Ku6"/>
+                            <constraint firstItem="ox0-zg-pJK" firstAttribute="trailing" secondItem="qEU-60-mCT" secondAttribute="trailing" id="MrH-fR-cjf"/>
+                            <constraint firstItem="GXI-xJ-iee" firstAttribute="centerX" secondItem="ox0-zg-pJK" secondAttribute="centerX" id="PgA-eW-FBD"/>
+                            <constraint firstItem="ox0-zg-pJK" firstAttribute="bottom" secondItem="GXI-xJ-iee" secondAttribute="bottom" constant="10" id="Y3r-fy-Qr7"/>
+                            <constraint firstItem="qEU-60-mCT" firstAttribute="height" secondItem="Vmf-sN-BZU" secondAttribute="height" multiplier="0.62" id="YOw-mV-jdz"/>
                             <constraint firstItem="TOn-iO-feQ" firstAttribute="top" secondItem="Pht-EH-Mi4" secondAttribute="bottom" constant="10" id="ZeA-wu-m8Z"/>
                             <constraint firstItem="TOn-iO-feQ" firstAttribute="leading" secondItem="ox0-zg-pJK" secondAttribute="leading" constant="10" id="fZv-KM-7Zj"/>
+                            <constraint firstItem="ox0-zg-pJK" firstAttribute="bottom" secondItem="qEU-60-mCT" secondAttribute="bottom" id="jmv-lA-UDM"/>
+                            <constraint firstItem="qEU-60-mCT" firstAttribute="top" secondItem="yn9-ie-p0u" secondAttribute="bottom" constant="10" id="wje-wm-jLg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ox0-zg-pJK"/>
                     </view>
                     <connections>
                         <outlet property="graphDistanceTempo" destination="E4k-ZM-9DU" id="EgT-LZ-57d"/>
+                        <outlet property="graphLabel" destination="yn9-ie-p0u" id="PGz-ej-kYL"/>
                         <outlet property="graphVelocityDistance" destination="a3f-DX-hRV" id="kPd-c2-aWn"/>
                         <outlet property="graphVelocityTime" destination="S0D-Vm-uRj" id="pIF-UA-f2u"/>
+                        <outlet property="pageControl" destination="GXI-xJ-iee" id="rit-Ed-bV0"/>
+                        <outlet property="scrollView" destination="qEU-60-mCT" id="9tO-zn-I93"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2i-VF-T7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2071.875" y="134.765625"/>
+            <point key="canvasLocation" x="2071.223021582734" y="134.35251798561151"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrancada" width="41" height="39"/>
         <image name="final" width="100" height="131"/>
         <image name="graphIcon" width="86" height="86"/>
         <image name="inicio" width="100" height="131"/>
         <image name="linha" width="6" height="1038"/>
         <image name="playButton" width="144" height="144"/>
+        <image name="relogio" width="31" height="31"/>
+        <image name="setas" width="45" height="26"/>
+        <image name="velcoimetro" width="49" height="37"/>
     </resources>
 </document>
