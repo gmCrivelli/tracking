@@ -19,8 +19,8 @@ class GraphView: UIView {
     private struct Constants {
         static let cornerRadiusSize = CGSize(width: 8.0, height: 8.0)
         static let margin: CGFloat = 20.0
-        static let topBorder: CGFloat = 60
-        static let bottomBorder: CGFloat = 50
+        static let topBorder: CGFloat = 20
+        static let bottomBorder: CGFloat = 20
         static let colorAlpha: CGFloat = 0.3
         static let circleDiameter: CGFloat = 5.0
     }
@@ -55,9 +55,13 @@ class GraphView: UIView {
         let margin = Constants.margin
         let graphWidth = width - margin * 2 - 4
         var maxX:Double = 0.0
+        var maxY:Double = 0.0
         for p in graphPoints {
             if p.1 > maxX {
                 maxX = p.1
+            }
+            if p.0 > maxY {
+                maxY = p.0
             }
         }
         let columnXPoint = { (rawX: Double) -> CGFloat in
@@ -69,11 +73,9 @@ class GraphView: UIView {
         let topBorder = Constants.topBorder
         let bottomBorder = Constants.bottomBorder
         let graphHeight = height - topBorder - bottomBorder
-        let maxY = (graphPoints.last as (Double,Double)!).1
-        
         let columnYPoint = { (graphPoint: Double) -> CGFloat in
             let y = CGFloat(graphPoint) / CGFloat(maxY) * graphHeight
-            return graphHeight + topBorder - y // Flip the graph
+            return graphHeight + bottomBorder - y // Flip the graph
         }
         
         //draw the line graph
@@ -98,7 +100,7 @@ class GraphView: UIView {
         let clippingPath = graphPath.copy() as! UIBezierPath
         
         //3 - add lines to the copied path to complete the clip area
-        clippingPath.addLine(to: CGPoint(x:columnXPoint(Double(graphPoints.count - 1)), y:height))
+        clippingPath.addLine(to: CGPoint(x:columnXPoint((graphPoints.last?.1)!), y:height))
         clippingPath.addLine(to: CGPoint(x:columnXPoint(0), y:height))
         clippingPath.close()
         
@@ -117,10 +119,10 @@ class GraphView: UIView {
         graphPath.lineWidth = 2.0
         graphPath.stroke()
         
+        
         //Draw horizontal graph lines on the top of everything
         let linePath = UIBezierPath()
         
-        /*
         //top line
         linePath.move(to: CGPoint(x: margin, y: topBorder))
         linePath.addLine(to: CGPoint(x: width - margin, y: topBorder))
@@ -137,7 +139,7 @@ class GraphView: UIView {
         let color = UIColor(white: 1.0, alpha: Constants.colorAlpha)
         color.setStroke()
         linePath.lineWidth = 1.0
-        linePath.stroke()*/
+        linePath.stroke()
         
     }
 

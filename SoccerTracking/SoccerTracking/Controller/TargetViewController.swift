@@ -219,7 +219,12 @@ class TargetViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         let percentageRan = distanceRanSoFar / distanceBetweenMarkersInPixels
         print(percentageRan)
         
-        runningData.append((Double(distanceBetweenMarkersInMeters) * Double(percentageRan), timeInterval))
+        //validation of data
+        let dist:Double = (Double(distanceBetweenMarkersInMeters) * Double(percentageRan))
+        if(true) {
+            runningData.append((dist, timeInterval))
+        }
+        
         if percentageRan >= 1 {
             contando = false
             performSegue(withIdentifier: "showGraph", sender: nil)
